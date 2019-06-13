@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="logic.js"></script>
+    <script src="ServerManager.js"></script>
+    <script src="UserManager.js"></script>
+    <script src="AddressManager.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script type="text/javascript" language="javascript">
+
+    </script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Shop</h1>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <button onclick="getProducts()"> Show Products </button>
+        <button onclick="showMyAccount()">My account</button>
+
+    </div>
+
+    <article style="height: 100%">
+
+        <div id="products"></div>
+        <div id="logonmessage"></div>
+        <div id="newProduct">
+            <h1>New Product</h1>
+            <p>
+
+            <form id="newProductForm" action="">
+
+                Name:<br>
+                <input type="text" name="name" value="">
+                <br>
+                Price:<br>
+                <input type="text" name="price" value="">
+                <br>
+
+                <input type="submit">
+            </form>
+        </div>
+        <div id="my-account">
+            <p id="loggedUser">Hello</p>
+            <h1>My account</h1>
+            <div id="nav-bar-buttons">
+                <button id="login_btn" onclick="showLogin()"> Login </button>
+                <button id="register_btn" onclick="showRegister()"> Register </button>
+                <button id="cart_btn" onclick="getCart()"> My cart </button>
+                <!--<button id="orders_btn"> My orders </button>-->
+                <button id="address_btn" onclick="getAddresses()"> Address book </button>
+            </div>
+
+            <div id="login">
+                <h1>Login</h1>
+                <p>
+
+                <form id="logonForm" action="">
+
+                    Email:<br>
+                    <input type="text" name="email" value="">
+                    <br>
+                    Password:<br>
+                    <input type="text" name="password" value="">
+                    <br>
+                    <br>
+                    <input type="submit">
+                </form>
+
+                <div id="logged">
+                    <h2> User is logged in</h2>
+                    <button onclick="logOut()">Log out</button>
+
+                </div>
+            </div>
+
+            <div id="register">
+                <h1>Register</h1>
+                <p>
+
+                <form id="registerForm" action="">
+
+                    Email:<br>
+                    <input type="text" name="email" value="">
+                    <br>
+                    Name:<br>
+                    <input type="text" name="name" value="">
+                    <br>
+                    Password:<br>
+                    <input type="text" name="password" value="">
+                    <br>
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+
+            <div id="cart"></div>
+            <div id="address_book">
+                <h1>Address book</h1>
+
+                <button onclick="addNewAddress()">Add new address</button>
+                <div id="addresses"></div>
+                <form id="addressForm" action="">
+                    <br>
+                    <br>
+                    Phone number:<br>
+                    <input type="text" name="phone" value="">
+                    <br>
+                    Street:<br>
+                    <input type="text" name="street" value="">
+                    <br>
+                    City:<br>
+                    <input type="text" name="city" value="">
+                    <br>
+                    Country:<br>
+                    <input type="text" name="country" value="">
+                    <br>
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+
+        </div>
+    </article>
+</div>
+</body>
+</html>
